@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_bur(a,b) {
+return a + b;
+}
+function odejmowanie_bur(a,b) {
+return a - b;
+}
+function mnozenie_bur(a,b) {
+return a * b;
+}
+function od_kwadratu_bur(a,b) {
+return Math.pow(a,2);
+return Math.pow(b,2);
+}
+function reszta_z_dzielenia_a_przez_b_bur(a,b) {
+return a % b;
+}
+document.write("suma="+suma_bur(a,b)+"<br>"+
+"odejmowanie="+odejmowanie_bur(a,b)+"<br>"+
+"mnozenie="+mnozenie_bur(a,b)+"<br>"+
+"od kwadratu="+od_kwadratu_bur(a)+" i "+
+od_kwadratu_bur(b)+"<br>"+
+"reszta z dzielenia a przez b="+reszta_z_dzielenia_a_przez_b_bur(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>

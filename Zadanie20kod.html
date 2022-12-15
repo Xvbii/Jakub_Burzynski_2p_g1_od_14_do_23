@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+			<style>
+			.txt{resize: none;}
+			</style>
+	</head>
+		
+		<body>
+		<textarea class="txt" cols="50px" rows="35px" readonly>
+		 Przykład obliczenia Pow i Obw trapezu równoramiennego
+</title>
+ <script language="JavaScript">
+function Pow_burzynski(a,b,h)
+{
+ a_bur=parseFloat(a);
+ b_bur=parseFloat(b);
+ h_bur=parseFloat(h);
+ Pow_bur=(a_bur+b_bur)/2*h_bur;
+ document.getElementsByName('pow')[0].value=Pow_bur.toFixed(2);
+ pokaz1.innerHTML="Pole="+Pow_bur.toFixed(2)+"<br>";
+}
+function Obw_burzynski(a,b,h)
+{
+ a_bur=parseFloat(a);
+ b_bur=parseFloat(b);
+ h_bur=parseFloat(h);
+ a2_bur=(a_bur-b_bur)/2;
+ c_bur=Math.pow(a2_bur,2) + Math.pow(h_bur,2);
+ c2_bur=Math.sqrt(c_bur);
+ Obw_bur=a_bur+b_bur+c2_bur+c2_bur;
+ document.getElementsByName('obw')[0].value=Obw_bur.toFixed(2);
+ pokaz2.innerHTML="Obwód="+Obw_bur.toFixed(2)+"<br>";
+}
+ </script>
+</head> 
+<body> 
+Obliczanie pole i obwód trapezu równoramiennego
+<br> <br>
+<form name="formularz" action="..." onsubmit="Pow_burzynski(this.a.value,this.b.value,this.h.value); 
+Obw_burzynski(this.a.value,this.b.value,this.h.value);return false"> 
+ Podaj a=
+ <input size="6" name="a">
+ Podaj b=
+ <input size="6" name="b">
+ Podaj h=
+ <input size="6" name="h">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ Pole=
+ <input size="6" name="pow">
+ Obwód=
+ <input size="6" name="obw">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body> 
+</html>
+		</textarea>
+		</body>
+</html>
